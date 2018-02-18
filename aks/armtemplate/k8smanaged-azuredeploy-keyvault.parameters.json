@@ -25,7 +25,7 @@
           "keyVault": {
             "id": "/subscriptions/<subscriptionid>/resourceGroups/<keyVaultResourceGroup>/providers/Microsoft.KeyVault/vaults/<keyVaultName>"
           },
-          "secretName": "key vault secret name"
+          "secretName": "keyVaultSecretName"
         }
       }
     }
