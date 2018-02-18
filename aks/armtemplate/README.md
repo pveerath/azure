@@ -2,13 +2,13 @@
 
 - [Steps](#steps)
     - [Create SSH Key](#create-ssh-key)
-    - [Authenticate azure CLI & Select subscription](#authenticate-azure-cli-select-subscription)
+    - [Authenticate Azure CLI & Select Subscription](#authenticate-azure-cli-select-subscription)
     - [Create a Resource Group](#create-a-resource-group)
-    - [Create Service Principal and assign role](#create-service-principal-and-assign-role)
+    - [Create Service Principal and Assign Role](#create-service-principal-and-assign-role)
     - [Update the parameters in the Azure Resource Manager Template parameter file](#update-the-parameters-in-the-azure-resource-manager-template-parameter-file)
-    - [Deploy the cluster using the Azure Resource Manager Template](#deploy-the-cluster-using-the-azure-resource-manager-template)
-    - [Connect to the cluster](#connect-to-the-cluster)
-    - [Steps to create Key Vault and set secret](#steps-to-create-key-vault-and-set-secret)
+    - [Deploy the Cluster using the Azure Resource Manager Template](#deploy-the-cluster-using-the-azure-resource-manager-template)
+    - [Connect to the Cluster](#connect-to-the-cluster)
+    - [Steps to Create Key Vault and Set Secret](#steps-to-create-key-vault-and-set-secret)
 
 # Steps
 
@@ -18,7 +18,7 @@ Generate a SSH key pair to use in the creation of the AKS cluster. You can find 
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
-## Authenticate azure CLI & Select subscription
+## Authenticate Azure CLI & Select Subscription
         
         az login
         az account set --subscription "subscriptionID"
@@ -28,7 +28,7 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
         az group create --name <resourceGroupName> --location <region>
 
- ## Create Service Principal and assign role
+ ## Create Service Principal and Assign Role
         
         az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscriptionID>/resourceGroups/<resourceGroupName>"
 
@@ -47,19 +47,19 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
  
 
- ## Deploy the cluster using the Azure Resource Manager Template
+ ## Deploy the Cluster using the Azure Resource Manager Template
        
         az group deployment create --resource-group <resourceGroupName> --template-file k8smanaged-azuredeploy.json --parameters @k8smanaged-azuredeploy.parameters.json
 
 
-## Connect to the cluster
+## Connect to the Cluster
         
         az aks get-credentials  --name <clusterName> --resource-group <resourceGroupName>
 
 
 
 
-## Steps to create Key Vault and set secret
+## Steps to Create Key Vault and Set Secret
     
     Create Key Vault and enable for template deployment
     
