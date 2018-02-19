@@ -16,7 +16,7 @@
 
 Generate a SSH key pair to use in the creation of the AKS cluster. You can find a detailed instructions on how to create an SSH key pair at the URL below. 
 
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed
 
 ## Authenticate Azure CLI & Select Subscription
         
