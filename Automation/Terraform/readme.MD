@@ -45,6 +45,9 @@ Terraform Template files:
     linuxVM.tf  
     (This file contains the code of the infrastructure that you are deploying)
 
+    output.tf
+    (This file contains settings that needs to be displayed after the deployment)
+
 Initialize Terraform 
 
 `terraform init`
