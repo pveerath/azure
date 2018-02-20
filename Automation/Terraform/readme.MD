@@ -23,9 +23,39 @@ https://www.packer.io/docs/install/index.html
 
 ### Use Packer to Create an Ubuntu image with NGINX installed
 
-The article below details how to use Packer to define and build a custom image in Azure
+In the packer template (vmNGINX_Packer.json) , update the azure service principal credentails (client_id, client_secret, and tenant_id) and azure subscription_id
 
-https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer
+Build the packer image using the following command. This will create an azure custom image in the resource group defined in the template
+
+`packer build vmNGINX_Packer.json`
+
+### Build and Deploy the VM using the Terraform template
+
+Terraform Template files:
+    
+    variables.tf 
+    (This file contains values of the variables used in the template)
+    
+    linuxvm.tf  
+    (This file contains the code of the infrastructure that you are deploying)
+
+Initialize Terraform 
+
+`terraform init`
+
+Validate the template 
+
+`terraform plan`
+
+if the validation is successful, apply the template
+
+`terraform apply`
+
+To clean up the environment created, use the following command
+
+`terraform destroy`
+
+
 
 
 
