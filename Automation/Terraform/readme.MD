@@ -29,14 +29,14 @@ Build the packer image using the following command. This will create an azure cu
 
 `packer build vmNGINX_Packer.json`
 
-### Build and Deploy the VM using the Terraform template
+### Build and Deploy the VM using the Terraform Template
 
 Terraform Template files:
     
     variables.tf 
     (This file contains values of the variables used in the template)
     
-    linuxvm.tf  
+    linuxVM.tf  
     (This file contains the code of the infrastructure that you are deploying)
 
 Initialize Terraform 
