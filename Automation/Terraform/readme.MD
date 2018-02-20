@@ -15,6 +15,10 @@ Generate an SSH key pair. You can find a detailed instructions on how to create 
 
 https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed
 
+## Create Service Principal
+
+`az ad sp create-for-rbac`
+
 ### Install Packer
 
 Installation instructions can be found at the following URL
