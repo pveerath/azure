@@ -1,10 +1,12 @@
 
-# Use Terraform to create a Linux VM in Azure from a Packer Custom Image with NGINX installed
+## Use Terraform to create a Linux VM in Azure from a Packer Custom Image with NGINX installed
 
 Terraform is a tool (templating language) for building, changing, and versioning infrastructure safely and efficiently. Using Terraform, you can automate the tasks of building, changing and de-provisioning(destroy)the infrastructure
+
 ## Steps
 
 ### Install Terraform and configure it to access Azure
+
 Installation instructions can be found at the following URL
 
 https://www.terraform.io/intro/getting-started/install.html
