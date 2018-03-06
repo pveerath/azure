@@ -30,7 +30,7 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-de
 
  ## Create Service Principal and Assign Role
         
-        az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscriptionID>/resourceGroups/<resourceGroupName>"
+        az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscriptionID>/"
 
  ## Update the parameters in the Azure Resource Manager Template parameter file
         
